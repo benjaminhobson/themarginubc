@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility Management: The Default Policy - The Margin UBC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        /* Header */
+        header {
+            background-color: #0a1628;
+            padding: 2rem 0;
+            border-bottom: 3px solid #0a1628;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* Article Content */
+        .article-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .article-header {
+            margin-bottom: 2rem;
+        }
+
+        .article-title {
+            font-family: 'Georgia', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .article-byline {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+
+        .article-date {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .article-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .image-caption {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 2.5rem;
+        }
+
+        .article-body {
+            font-family: 'Georgia', serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #1a1a1a;
+        }
+
+        .article-body h2 {
+            font-family: 'Georgia', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #0a1628;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Drop Cap */
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 4.5rem;
+            line-height: 0.85;
+            font-weight: 400;
+            margin-right: 0.1rem;
+            margin-top: 0.1rem;
+            color: #0a1628;
+        }
+
+        /* Links */
+        .article-body a {
+            color: #000;
+            text-decoration: underline;
+            transition: opacity 0.2s;
+        }
+
+        .article-body a:hover {
+            opacity: 0.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a1628;
+            color: #ffffff;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .drop-cap::first-letter {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">THE MARGIN</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header">
+                <h1 class="article-title">Visibility Management: The Default Policy</h1>
+                <p class="article-byline">By Benjamin Hobson</p>
+                <p class="article-date">August 12, 2026</p>
+            </div>
+
+            <img src="sf-homelessness.jpg" alt="San Francisco street scene" class="article-image">
+            <p class="image-caption">Image source: [add credit]</p>
+
+            <div class="article-body">
+                <h2>Background</h2>
+                <p class="drop-cap">In 2024, the Supreme Court ruled 6-3 that criminalizing people for sleeping outside did not constitute cruel and unusual punishment. The ruling erased a prior constraint from Martin v. Boise, which only permitted cities to sweep unhoused people if they could offer them shelter as an alternative. The majority in Grants Pass v. Johnson argued that the ordinances didn't criminalize homelessness itself, only the act of sleeping or camping in public at particular times and places, and that cities maintain discretion in how they choose to enforce it.</p>
+
+                <p>The dissent called this reasoning a legal fiction. Someone with no home or shelter sleeps in public out of biological necessity and punishing that act effectively functions as punishing the status of homelessness itself. Justice Sotomayor called sleep an "essential bodily function," and argued that criminalizing it isn't meaningfully distinct from criminalizing homelessness outright. Regardless of where you might stand, the resulting impact was handing cities the discretion to address homelessness however it is most visible with zero obligation to house anyone first. Few cities have had as many unhoused individuals to handle as San Francisco.</p>
+
+                <h2>The Tools</h2>
+                <p>In the six months before Grants Pass, San Francisco issued 71 citations or arrests for illegal lodging. In the six months after, that number rose to 427. Over the following year, the total passed 1,080, more than ten times the prior year's count. The increase began under Mayor London Breed, who, while campaigning for reelection, promised "very aggressive" enforcement of homeless encampments.</p>
+
+                <p>Her successor, Daniel Lurie, inherited both the enforcement apparatus and a second, older tool: Homeward Bound, a program that buys unhoused residents a one-way bus ticket out of the city, for roughly $180 to $270 a person. Since its 2005 launch, the program has relocated a self-reported 11,000 people. Whether it reduces homelessness or simply exports it is unclear. The aggressive sweeps have also continued under Mayor Lurie, making full use of the Grant's Pass ruling.</p>
+
+                <p>By Mayor Lurie's account, the city's strategies are working: "I'm proud to announce incredible progress: unsheltered homelessness in San Francisco is down 22% to its lowest level in 15 years," Lurie said. It is worth understanding however, that the count also changed its methodology. Surveying shifted from an 8pm to midnight window, when people are still settling into visible sleeping spots, to 5am to 10:30am, after many have already moved to shelters, transit, or less visible locations for the day. Identification shifted from visual counts, which register anyone who appears to be sleeping outside, to verbal interaction, which requires someone to wake and respond; a person asleep and unroused goes uncounted. Critics say the new number can't be meaningfully compared to any prior year's. A count engineered, deliberately or not, to register improvement fits that same pattern of managing the appearance of the problem rather than its scale. Two administrations with little else in common arrive at the same place, creating a count and a landscape that appear improved whether or not the underlying problem has.</p>
+
+                <h2>The Budget</h2>
+                <p>San Francisco's Department of Homelessness and Supportive Housing operated on an $846.3 million budget in fiscal year 2024-25, funded roughly evenly by the General Fund and by Our City, Our Home, a tax on businesses with over $50 million in gross receipts. Sixty percent of that budget goes to housing. But most of it doesn't build anything new. It maintains the more than 15,000 units of permanent supportive housing the city already operates, the rent subsidies, case management, and building costs required to keep people who already exited homelessness from returning to it.</p>
+
+                <p>The size of the budget would indicate that homelessness isn't being treated as a minor issue not worth funding. HSH was allocated $785.6 million for the current fiscal year. In 2024, 17,859 people entered the department's homelessness response system, according to HSH's own Inflow and Outflow Analysis, while successful exits to stable housing totaled 5,756. Dividing one figure by the other, we arrive at a new figure: for roughly every person the department houses, three become newly homeless. No plausible increase to that budget would ever close that ratio. Effectively, what $785.6 million a year buys is not a declining homelessness rate but the continuation of the current rate of loss.</p>
+
+                <h2>Defaulting</h2>
+                <p>Regional affordability, the actual engine pushing people into homelessness, moves on a timeline of years to decades: wage growth concentrated among a small number of employers, housing supply that hasn't kept pace, rents detached from local incomes. Elections move on a timeline of two to four years, meaning no mayor can close that gap inside a single term, regardless of budget or intent.</p>
+
+                <p>Naturally, mayors reach for what's left: visibility management, the only lever fast enough to touch a mayor's own clock. Sweeps, bus tickets, and a re-timed count all produce results before the next election, and that has become policy choice and pattern in San Francisco politics. The people positioned to offer resources on that same fast timeline, campaign funding, transition expertise, the appearance of partnership, tend to be the same people whose wealth is part of what's pricing residents out to begin with.</p>
+
+                <p>None of this requires believing Breed or Lurie set out to fail. A system asked to solve a regional problem with a municipal budget on an electoral timeline will produce visibility management almost by default, whoever holds office. The actual fix sits at a scale no mayor controls: regional housing supply, state preemption of local zoning, income policy that doesn't concentrate this heavily in the first place. None of that fits on a two-year clock, and until it does, San Francisco will keep managing what it hasn't solved, and the people best positioned to benefit from that arrangement will keep getting a seat at the table where it's decided.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 The Margin UBC. All rights reserved.</p>
+    </footer>
+</body>
+</html>
